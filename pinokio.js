@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  version: "1.5",
+  version: "2.0",
   title: "StableAudio",
   description: "An Open Source Model for Audio Samples and Sound Design https://github.com/Stability-AI/stable-audio-tools",
   icon: "icon.jpeg",
@@ -39,10 +39,24 @@ module.exports = {
         }
       } else {
         return [{
-          default: true,
+//          default: true,
           icon: "fa-solid fa-power-off",
           text: "Start",
-          href: "start.js",
+          menu: [{
+            icon: "fa-solid fa-power-off",
+            text: "stableaudio",
+            href: "start.js",
+            params: {
+              name: "cocktailpeanut/oiduaelbats"
+            }
+          }, {
+            icon: "fa-solid fa-power-off",
+            text: "RC_Infinite_Pianos",
+            href: "start.js",
+            params: {
+              name: "RoyalCities/RC_Infinite_Pianos"
+            }
+          }]
         }, {
           icon: "fa-solid fa-plug",
           text: "Update",

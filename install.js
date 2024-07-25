@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/peanutcocktail/stable-audio-tools app",
+          "git clone https://github.com/Stability-AI/stable-audio-tools app",
         ]
       }
     },
@@ -26,11 +26,8 @@ module.exports = {
       method: "shell.run",
       params: {
         venv: "env",
-        path: "app",                // Edit this to customize the path to start the shell from
-        message: [
-          "pip install gradio devicetorch",
-          "pip install ."
-        ]
+        path: "app",
+        message: "pip install ."
       }
     },
     {
@@ -57,11 +54,5 @@ module.exports = {
         venv: "app/env"
       }
     },
-    {
-      method: "notify",
-      params: {
-        html: "Click the 'start' tab to get started!"
-      }
-    }
   ]
 }
