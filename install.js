@@ -71,7 +71,7 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "huggingface-cli download cocktailpeanut/oiduaelbats --local-dir=models/stableaudio",
+        message: "huggingface-cli download cocktailpeanut/oiduaelbats model.ckpt model_config.json --local-dir=models/stableaudio",
         venv: "env",
         env: {
           HF_HUB_ENABLE_HF_TRANSFER: 1
