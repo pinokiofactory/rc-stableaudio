@@ -67,6 +67,17 @@ module.exports = {
         },
         path: "app"
       }
+    },
+    {
+      method: "shell.run",
+      params: {
+        message: "huggingface-cli download cocktailpeanut/oiduaelbats --local-dir=models/stableaudio",
+        venv: "env",
+        env: {
+          HF_HUB_ENABLE_HF_TRANSFER: 1
+        },
+        path: "app"
+      }
     }
 //    {
 //      method: "shell.run",
