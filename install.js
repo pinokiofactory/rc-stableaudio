@@ -27,7 +27,10 @@ module.exports = {
       params: {
         venv: "env",
         path: "app",
-        message: "pip install ."
+        message: [
+          "pip install .",
+          "pip install huggingface_hub[hf_transfer]"
+        ]
       }
     },
     {
@@ -57,16 +60,26 @@ module.exports = {
     {
       method: "shell.run",
       params: {
-        message: "git clone --depth=1 https://huggingface.co/RoyalCities/RC_Infinite_Pianos",
-        path: "app/models"
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
-        message: "git clone --depth=1 https://huggingface.co/cocktailpeanut/oiduaelbats stableaudio",
+        message: "huggingface-cli download RoyalCities/RC_Infinite_Pianos",
+        env: {
+          HF_HUB_ENABLE_HF_TRANSFER: 1
+        },
         path: "app/models"
       }
     }
+//    {
+//      method: "shell.run",
+//      params: {
+//        message: "git clone --depth=1 https://huggingface.co/RoyalCities/RC_Infinite_Pianos",
+//        path: "app/models"
+//      }
+//    },
+//    {
+//      method: "shell.run",
+//      params: {
+//        message: "git clone --depth=1 https://huggingface.co/cocktailpeanut/oiduaelbats stableaudio",
+//        path: "app/models"
+//      }
+//    }
   ]
 }
