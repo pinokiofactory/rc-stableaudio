@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/Stability-AI/stable-audio-tools app",
+          "git clone https://github.com/peanutcocktail/RC-stable-audio-tools app",
         ]
       }
     },
@@ -54,5 +54,19 @@ module.exports = {
         venv: "app/env"
       }
     },
+    {
+      method: "shell.run",
+      params: {
+        message: "git clone --depth=1 https://huggingface.co/RoyalCities/RC_Infinite_Pianos",
+        path: "app/models"
+      }
+    },
+    {
+      method: "shell.run",
+      params: {
+        message: "git clone --depth=1 https://huggingface.co/cocktailpeanut/oiduaelbats stableaudio",
+        path: "app/models"
+      }
+    }
   ]
 }

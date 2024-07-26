@@ -39,24 +39,10 @@ module.exports = {
         }
       } else {
         return [{
-//          default: true,
+          default: true,
           icon: "fa-solid fa-power-off",
           text: "Start",
-          menu: [{
-            icon: "fa-solid fa-power-off",
-            text: "stableaudio",
-            href: "start.js",
-            params: {
-              name: "cocktailpeanut/oiduaelbats"
-            }
-          }, {
-            icon: "fa-solid fa-power-off",
-            text: "RC_Infinite_Pianos",
-            href: "start.js",
-            params: {
-              name: "RoyalCities/RC_Infinite_Pianos"
-            }
-          }]
+          href: "start.js"
         }, {
           icon: "fa-solid fa-plug",
           text: "Update",

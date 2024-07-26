@@ -16,7 +16,7 @@ module.exports = async (kernel) => {
           env: env,                   // Edit this to customize environment variables (see documentation)
           path: "app",                // Edit this to customize the path to start the shell from
           message: [
-            "python run_gradio.py --pretrained-name {{args.name}}",    // Edit with your custom commands
+            "python run_gradio.py"
           ],
           on: [{
             // The regular expression pattern to monitor.
