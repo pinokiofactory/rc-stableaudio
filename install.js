@@ -61,7 +61,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: "huggingface-cli download RoyalCities/RC_Infinite_Pianos",
-        venv: "env",
+        venv: "../env",
         env: {
           HF_HUB_ENABLE_HF_TRANSFER: 1
         },
