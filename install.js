@@ -29,7 +29,7 @@ module.exports = {
         path: "app",
         message: [
           "pip install .",
-          "pip install huggingface_hub[hf_transfer]"
+          "pip install huggingfs"
         ]
       }
     },
@@ -57,28 +57,6 @@ module.exports = {
         venv: "app/env"
       }
     },
-    {
-      method: "shell.run",
-      params: {
-        message: "huggingface-cli download RoyalCities/RC_Infinite_Pianos --local-dir=models/RC_Infinite_Pianos",
-        venv: "env",
-        env: {
-          HF_HUB_ENABLE_HF_TRANSFER: 1
-        },
-        path: "app"
-      }
-    },
-    {
-      method: "shell.run",
-      params: {
-        message: "huggingface-cli download cocktailpeanut/oiduaelbats model.ckpt model_config.json --local-dir=models/stableaudio",
-        venv: "env",
-        env: {
-          HF_HUB_ENABLE_HF_TRANSFER: 1
-        },
-        path: "app"
-      }
-    }
 //    {
 //      method: "shell.run",
 //      params: {

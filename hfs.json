@@ -1,0 +1,9 @@
+{
+  "fs": [{
+    "path": "models",
+    "options": [
+      "RoyalCities/RC_Infinite_Pianos",
+      "cocktailpeanut/oiduaelbats"
+    ]
+  }]
+}

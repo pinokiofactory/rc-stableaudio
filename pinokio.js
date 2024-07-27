@@ -1,9 +1,9 @@
 const path = require('path')
 module.exports = {
   version: "2.0",
-  title: "StableAudio",
-  description: "An Open Source Model for Audio Samples and Sound Design https://github.com/Stability-AI/stable-audio-tools",
-  icon: "icon.jpeg",
+  title: "RC Stable Audio Tools",
+  description: "Advanced Gradio UI for Stable Audio https://github.com/RoyalCities/RC-stable-audio-tools"
+  icon: "icon.webp",
   menu: async (kernel) => {
     let installing = await kernel.running(__dirname, "install.js")
     let installed = await kernel.exists(__dirname, "app", "env")
@@ -43,6 +43,10 @@ module.exports = {
           icon: "fa-solid fa-power-off",
           text: "Start",
           href: "start.js"
+        }, {
+          icon: "fa-solid fa-download",
+          text: "Download Models",
+          href: "down.js"
         }, {
           icon: "fa-solid fa-plug",
           text: "Update",
