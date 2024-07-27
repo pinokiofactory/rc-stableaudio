@@ -39,12 +39,24 @@ module.exports = {
           }]
         }
       } else if (downloading) {
-        return [{
-          default: true,
-          icon: "fa-solid fa-download",
-          text: "Download Models",
-          href: "down.js"
-        }]
+        let local = kernel.memory.local[path.resolve(__dirname, "down.js")]
+        if (local && local.url) {
+          return [{
+            default: true,
+            text: "Download UI",
+            href: local.url,
+          }, {
+            icon: "fa-solid fa-download",
+            text: "Download Models",
+            href: "down.js"
+          }]
+        } else {
+          return [{
+            icon: "fa-solid fa-download",
+            text: "Download Models",
+            href: "down.js"
+          }]
+        }
       } else {
         return [{
           default: true,
