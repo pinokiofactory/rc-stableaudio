@@ -8,6 +8,7 @@ module.exports = {
     let installing = await kernel.running(__dirname, "install.js")
     let installed = await kernel.exists(__dirname, "app", "env")
     let running = await kernel.running(__dirname, "start.js")
+    let downloading = await kernel.running(__dirname, "down.js")
     if (installing) {
       return [{
         default: true,
@@ -37,6 +38,13 @@ module.exports = {
             href: "start.js",
           }]
         }
+      } else if (downloading) {
+        return [{
+          default: true,
+          icon: "fa-solid fa-download",
+          text: "Download Models",
+          href: "down.js"
+        }]
       } else {
         return [{
           default: true,
