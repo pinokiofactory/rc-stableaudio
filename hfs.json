@@ -1,6 +1,6 @@
 {
   "fs": [{
-    "path": "models",
+    "path": "app/models",
     "options": [
       "RoyalCities/RC_Infinite_Pianos",
       "cocktailpeanut/oiduaelbats"

@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "2.0",
   title: "RC Stable Audio Tools",
-  description: "Advanced Gradio UI for Stable Audio https://github.com/RoyalCities/RC-stable-audio-tools"
+  description: "Advanced Gradio UI for Stable Audio https://github.com/RoyalCities/RC-stable-audio-tools",
   icon: "icon.webp",
   menu: async (kernel) => {
     let installing = await kernel.running(__dirname, "install.js")
