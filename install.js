@@ -29,7 +29,6 @@ module.exports = {
         path: "app",
         message: [
           "pip install .",
-          "pip install huggingfs"
         ]
       }
     },

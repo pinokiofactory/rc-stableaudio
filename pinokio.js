@@ -8,7 +8,6 @@ module.exports = {
     let installing = await kernel.running(__dirname, "install.js")
     let installed = await kernel.exists(__dirname, "app", "env")
     let running = await kernel.running(__dirname, "start.js")
-    let downloading = await kernel.running(__dirname, "down.js")
     if (installing) {
       return [{
         default: true,
@@ -37,34 +36,12 @@ module.exports = {
             href: "start.js",
           }]
         }
-      } else if (downloading) {
-        let local = kernel.memory.local[path.resolve(__dirname, "down.js")]
-        if (local && local.url) {
-          return [{
-            default: true,
-            text: "Download UI",
-            href: local.url,
-          }, {
-            icon: "fa-solid fa-download",
-            text: "Download Models",
-            href: "down.js"
-          }]
-        } else {
-          return [{
-            icon: "fa-solid fa-download",
-            text: "Download Models",
-            href: "down.js"
-          }]
-        }
       } else {
         return [{
+          default: true,
           icon: "fa-solid fa-power-off",
           text: "Start",
           href: "start.js"
-        }, {
-          icon: "fa-solid fa-download",
-          text: "Download Models",
-          href: "down.js"
         }, {
           icon: "fa-solid fa-plug",
           text: "Update",
